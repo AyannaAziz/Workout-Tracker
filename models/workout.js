@@ -25,7 +25,7 @@ const workoutSchema = new Schema({
             weight: {
                 type: Number,
                 default: 0
-            } //do remaining items reps sets distance
+            }, 
             reps: {
                 type: Number,
                 default: 0
@@ -40,12 +40,8 @@ const workoutSchema = new Schema({
               }
         }
     ],
-    totalDuration: {
-        type: Number,
-        default: 0,
-      }
 });
 
-//create workout model usng mongoose
+//create workout model using mongoose
 const Workout = mongoose.model("Workout", workoutSchema);
 module.exports = Workout;
