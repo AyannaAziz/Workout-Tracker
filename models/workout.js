@@ -24,10 +24,27 @@ const workoutSchema = new Schema({
             },
             weight: {
                 type: Number,
+                default: 0
             } //do remaining items reps sets distance
+            reps: {
+                type: Number,
+                default: 0
+              },
+              sets: {
+                type: Number,
+                default: 0
+              },
+              distance: {
+                type: Number,
+                default: 0
+              }
         }
-    ]
-})
+    ],
+    totalDuration: {
+        type: Number,
+        default: 0,
+      }
+});
 
 //create workout model usng mongoose
 const Workout = mongoose.model("Workout", workoutSchema);
